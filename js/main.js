@@ -37,5 +37,52 @@ function setBackground() {
         greeting.textContent = "Good Evening";
     }
 }
+
+function getName() {
+    if (localStorage.getItem('gb_name') === null) {
+        name.textContent = '[Enter Name]';
+    } else {
+        name.textContent = localStorage.getItem('gb_name');
+    }
+}
+
+function setName(event) {
+    if (event.type === 'keypress') {
+        // only execute on enter key
+        if (event.keyCode == 13) {
+            localStorage.setItem('gb_name', event.target.innerText);
+            name.blur(); // leave name field
+        }
+    } else {
+        localStorage.setItem('gb_name', event.target.innerText);
+    }
+}
+function getTask() {
+    if (localStorage.getItem('gb_task') === null) {
+        task.textContent = '[Enter Task]';
+    } else {
+        task.textContent = localStorage.getItem('gb_task');
+    }
+}
+function setTask(event) {
+    if (event.type === 'keypress') {
+        // only execute on enter key
+        if (event.keyCode == 13) {
+            localStorage.setItem('gb_task', event.target.innerText);
+            task.blur(); // leave name field
+        }
+    } else {
+        localStorage.setItem('gb_task', event.target.innerText);
+    }
+}
+
+name.addEventListener('keypress', setName);
+name.addEventListener('blur', setName);
+
+task.addEventListener('keypress', setTask);
+task.addEventListener('blur', setTask);
+
 showTime();
 setBackground();
+getName();
+getTask();
