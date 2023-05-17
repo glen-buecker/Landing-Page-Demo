@@ -13,6 +13,8 @@
     text-align: center;
     height: 100vh; /* take up the entire viewport */
     color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   #time {
