@@ -25,15 +25,15 @@ function setBackground() {
     let today = new Date();
     if (today.getHours() > 5 && today.getHours() <= 11) {
         // morning
-        document.body.style.backgroundImage = "url('../img/morning.jpg')";
+        document.body.style.backgroundImage = "url('img/morning.jpg')";
         greeting.textContent = "Good Morning";
     } else if (today.getHours() <= 17){
         // afternoon
-        document.body.style.backgroundImage = "url('../img/afternoon.jpg')";
+        document.body.style.backgroundImage = "url('img/afternoon.jpg')";
         greeting.textContent = "Good Afternoon";
     } else {
         // evening
-        document.body.style.backgroundImage = "url('../img/evening.jpg')";
+        document.body.style.backgroundImage = "url('img/evening.jpg')";
         greeting.textContent = "Good Evening";
     }
 }
